@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Kod ile İndirme</title>
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+  <h1>.exe Dosyasını İndir</h1>
+  <p>QR kodu tarayarak indirme işlemini başlatabilirsiniz:</p>
+  <div id="qrcode"></div>
+  <script>
+    // Dosyanın URL'sini burada belirtiyoruz
+    var downloadURL = "https://<kullanıcı_adı>.github.io/<depo_adı>/files/<dosya_adı>.exe";
+
+    // QR kodu oluştur
+    new QRCode(document.getElementById("qrcode"), downloadURL);
+  </script>
+</body>
+</html>
